@@ -1,10 +1,16 @@
 import './App.css';
+import React from 'react'
 import Main from './Main';
+import {Route,Switch} from 'react-router-dom';
+import SecondPage from './SecondPage';
 function App() {
   return (
-    <div className="App">
-      <Main />
-    </div>
+    <React.Fragment>
+      <Switch>
+      <Route exact path='/' component={Main} />
+      <Route path='/second' component={SecondPage} />
+      </Switch>
+    </React.Fragment>
   );
 }
 

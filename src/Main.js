@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
+import './Main.css'
 function Main() {
     return (
         <div className='container'>
@@ -9,15 +10,21 @@ function Main() {
             <div className='second'>
                 <header className='head'>
                     <div className='head-f'>
-                        <button className='btn-first'>1</button>
+                        <Link to='/'>
+                        <button className='btn-first active'>1</button>
+                        </Link>
                         <p>Sign Up</p>
                     </div>
                     <div className='head-s'>
+                        <Link to='/second'>
                         <button className='btn-second'>2</button>
+                        </Link>
                         <p>Message</p>
                     </div>
                     <div className='head-t'>
+                        <Link to='/third'>
                         <button className='btn-third'>3</button>
+                        </Link>
                         <p>Checkbox</p>
                     </div>
                 </header>
@@ -51,7 +58,9 @@ function Main() {
                             <input type='text' autoComplete="off" required />
                         </div>
                         <hr className='hr-two' />
-                        <button className='btn' onClick='submit'>Next Step</button>
+                        <Link to='/second'>
+                        <button className='btn'>Next Step</button>
+                        </Link>
                     </form>
                 </main>
             </div>
